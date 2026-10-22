@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#4A90E2" />
+  <title>熹哥潼妹工作台</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-emoji">🍼</span>
+        <span class="brand-text">熹哥潼妹<br><small>育儿搞钱工作台</small></span>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="#home" data-page="home">🏠 <span>首页</span></a>
+        <a href="#topics" data-page="topics">💡 <span>选题</span></a>
+        <a href="#write" data-page="write">✍️ <span>写文案</span></a>
+        <a href="#shoot" data-page="shoot">🎬 <span>拍摄清单</span></a>
+        <a href="#publish" data-page="publish">📲 <span>发布记录</span></a>
+        <a href="#money" data-page="money">💰 <span>搞钱灵感</span></a>
+        <a href="#kids" data-page="kids">👶 <span>熹哥潼妹备忘录</span></a>
+        <a href="#dairen" data-page="dairen">🛒 <span>带货</span></a>
+        <a href="#work" data-page="work">📝 <span>工作备忘录</span></a>
+      </nav>
+      <div class="side-foot">
+        <div>v1.0 · 离线可用</div>
+        <div id="netStatus" class="net">● 联网</div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="hamburger" id="hamburger" aria-label="菜单">☰</button>
+        <div class="top-title" id="topTitle">首页</div>
+        <button class="refresh-btn" id="refreshBtn">🔄 获取今日热点</button>
+      </header>
+      <main id="view" class="view"></main>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

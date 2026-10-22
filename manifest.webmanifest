@@ -1,0 +1,17 @@
+{
+  "name": "熹哥潼妹工作台 · 育儿搞钱",
+  "short_name": "熹潼台",
+  "description": "母婴选题、口播文案、搞钱灵感、带娃备忘，手机电脑都能用，可装到桌面当App。",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF5FA",
+  "theme_color": "#4A90E2",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
