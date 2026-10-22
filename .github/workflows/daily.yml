@@ -1,0 +1,27 @@
+name: 每日母婴热点抓取
+on:
+  schedule:
+    # 每天北京时间 07:30 自动跑（UTC 23:30 前一天）
+    - cron: "30 23 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: 生成 hot.json
+        run: python fetch_topics.py
+      - name: 提交更新
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add hot.json
+          git diff --cached --quiet || git commit -m "chore: 每日母婴热点更新 $(date +%F)"
+          git push
